@@ -1,13 +1,14 @@
 #include "pch.h"
 #include "headers.h"
 
-class Tools {
-	Tools();
-	~Tools();
-public:
-	void hideMouse();
-	int Rand(int x);
-};
+
+void Tools::gotoxy(short x, short y)
+{
+	COORD coord;
+	coord.X = x;
+	coord.Y = y;
+	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
+}
 
 void Tools::hideMouse()
 {
