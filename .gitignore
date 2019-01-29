@@ -2,3 +2,4 @@
 /**/*.vcxproj
 /**/*.vcxproj.*
 /**/.vs/
+/**/*.exe
