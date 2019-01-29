@@ -2,4 +2,6 @@
 /**/*.vcxproj
 /**/*.vcxproj.*
 /**/.vs/
-/**/*.exe
+/**/x64/
+/**/Debug/
+/**/Release/
