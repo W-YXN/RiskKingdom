@@ -22,7 +22,7 @@ void Tools::hideMouse()
 int Tools::Rand(int x)
 {
 	srand( (int)time(0) + rand() * (rand()%107) / (rand()/107) );//Seed
-	int tmp = rand() % x;//GetRandomNumber(0 to x)
+	int tmp = rand() % x;//GetRandomNumber(0 to x-1)
 	return tmp;//return
 }
 
@@ -80,7 +80,7 @@ void Tools::coloredOutput(std::string st, short id)
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_GREEN | FOREGROUND_BLUE);
 		break;
 	}
-	std::cout << st;//Output
+	std::cout << st;//Output with Colour
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);//Default
 }
 
