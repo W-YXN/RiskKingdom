@@ -1,6 +1,332 @@
 #include "pch.h"
 #include "headers.h"
 
+void Tools::copyrightVideo()
+{
+	hideMouse();
+	int x = 12;
+	int y = 1;
+
+
+	gotoxy(0,0);
+	coloredOutput("F-studio³öÆ·", GREY);
+	Sleep(100);
+	gotoxy(0,0);
+	coloredOutput("F-studio³öÆ·", WHITE);
+	Sleep(100);
+	gotoxy(0,0);
+	coloredOutput("F-studio³öÆ·", L_WHITE);
+	Sleep(100);
+
+	int a = x;
+	int b = y;
+	for (int i = 1; i <= 812; i++)
+	{
+		switch (CopyrightVideo[i])
+		{
+		case 0:
+			gotoxy(a, b);
+			std::cout << "  ";
+			a += 2;
+			break;
+		case 1:
+			gotoxy(a, b);
+			coloredOutput("¡ö", GREY);
+			a += 2;
+			break;
+		case 2:
+			gotoxy(a, b);
+			coloredOutput("¡ö", GREY);
+			a += 2;
+			break;
+		case 3:
+			gotoxy(a, b);
+			coloredOutput("¡ö", GREY);
+			a += 2;
+			break;
+		case 4:
+			gotoxy(a, b);
+			coloredOutput("¡ö", GREY);
+			a += 2;
+			break;
+		case -1:
+			a = x;
+			b++;
+			break;
+		}
+	}
+	a = x, b = y;
+	for (int i = 1; i <= 812; i++)
+	{
+		switch (CopyrightVideo[i])
+		{
+		case 0:
+			a += 2;
+			break;
+		case 1:
+			gotoxy(a, b);
+			coloredOutput("¡ö", WHITE);
+			a += 2;
+			break;
+		case 2:
+			gotoxy(a, b);
+			coloredOutput("¡ö", WHITE);
+			a += 2;
+			break;
+		case 3:
+			gotoxy(a, b);
+			coloredOutput("¡ö", WHITE);
+			a += 2;
+			break;
+		case 4:
+			gotoxy(a, b);
+			coloredOutput("¡ö", WHITE);
+			a += 2;
+			break;
+		case -1:
+			a = x;
+			b++;
+			break;
+		}
+	}
+	a = x, b = y;
+	for (int i = 1; i <= 812; i++)
+	{
+		switch (CopyrightVideo[i])
+		{
+		case 0:
+			a += 2;
+			break;
+		case 1:
+			gotoxy(a, b);
+			coloredOutput("¡ö", L_WHITE);
+			a += 2;
+			break;
+		case 2:
+			gotoxy(a, b);
+			coloredOutput("¡ö", L_WHITE);
+			a += 2;
+			break;
+		case 3:
+			gotoxy(a, b);
+			coloredOutput("¡ö", L_WHITE);
+			a += 2;
+			break;
+		case 4:
+			gotoxy(a, b);
+			coloredOutput("¡ö", L_WHITE);
+			a += 2;
+			break;
+		case -1:
+			a = x;
+			b++;
+			break;
+		}
+	}
+	a = x, b = y;
+	for (int i = 1; i <= 812; i++)
+	{
+		switch (CopyrightVideo[i])
+		{
+		case 0:
+			a += 2;
+			break;
+		case 1:
+			a += 2;
+			break;
+		case 2:
+			gotoxy(a, b);
+			coloredOutput("¡ö", WHITE);
+			a += 2;
+			break;
+		case 3:
+			gotoxy(a, b);
+			coloredOutput("¡ö", WHITE);
+			a += 2;
+			break;
+		case 4:
+			gotoxy(a, b);
+			coloredOutput("¡ö", WHITE);
+			a += 2;
+			break;
+		case -1:
+			a = x;
+			b++;
+			break;
+		}
+	}
+	Sleep(50);
+	a = x, b = y;
+	for (int i = 1; i <= 812; i++)
+	{
+		switch (CopyrightVideo[i])
+		{
+		case 0:
+			a += 2;
+			break;
+		case 1:
+			a += 2;
+			break;
+		case 2:
+			gotoxy(a, b);
+			coloredOutput("¡ö", GREY);
+			a += 2;
+			break;
+		case 3:
+			gotoxy(a, b);
+			coloredOutput("¡ö", GREY);
+			a += 2;
+			break;
+		case 4:
+			a += 2;
+			break;
+		case -1:
+			a = x;
+			b++;
+			break;
+		}
+	}
+	Sleep(50);
+	a = x, b = y;
+	for (int i = 1; i <= 812; i++)
+	{
+		switch (CopyrightVideo[i])
+		{
+		case 0:
+			a += 2;
+			break;
+		case 1:
+			a += 2;
+			break;
+		case 2:
+			gotoxy(a, b);
+			std::cout << " ";
+			a += 2;
+			break;
+		case 3:
+			a += 2;
+			break;
+		case 4:
+			a += 2;
+			break;
+		case -1:
+			a = x;
+			b++;
+			break;
+		}
+	}
+	Sleep(3000);
+	a = x, b = y;
+	for (int i = 1; i <= 812; i++)
+	{
+		switch (CopyrightVideo[i])
+		{
+		case 0:
+			a += 2;
+			break;
+		case 1:
+			gotoxy(a, b);
+			coloredOutput("¡ö", WHITE);
+			a += 2;
+			break;
+		case 2:
+			a += 2;
+			break;
+		case 3:
+			a += 2;
+			break;
+		case 4:
+			a += 2;
+			break;
+		case -1:
+			a = x;
+			b++;
+			break;
+		}
+	}
+
+	a = x, b = y;
+	for (int i = 1; i <= 812; i++)
+	{
+		switch (CopyrightVideo[i])
+		{
+		case 0:
+			a += 2;
+			break;
+		case 1:
+			gotoxy(a, b);
+			coloredOutput("¡ö", GREY);
+			a += 2;
+			break;
+		case 2:
+			a += 2;
+			break;
+		case 3:
+			a += 2;
+			break;
+		case 4:
+			gotoxy(a, b);
+			coloredOutput("¡ö", GREY);
+			a += 2;
+			break;
+		case -1:
+			a = x;
+			b++;
+			break;
+		}
+	}
+	a = x, b = y;
+	for (int i = 1; i <= 812; i++)
+	{
+		switch (CopyrightVideo[i])
+		{
+		case 0:
+			a += 2;
+			break;
+		case 1:
+			gotoxy(a, b);
+			std::cout << "  ";
+			a += 2;
+			break;
+		case 2:
+			a += 2;
+			break;
+		case 3:
+			gotoxy(a, b);
+			std::cout << "  ";
+			a += 2;
+			break;
+		case 4:
+			gotoxy(a, b);
+			std::cout << "  ";
+			a += 2;
+			break;
+		case -1:
+			a = x;
+			b++;
+			break;
+		}
+	}
+	gotoxy(0,0);
+	coloredOutput("F-studio³öÆ·", WHITE);
+	Sleep(100);
+	gotoxy(0,0);
+	coloredOutput("F-studio³öÆ·", GREY);
+	Sleep(100);
+	std::string *str = new std::string;
+	*str = "F-studio³öÆ·";
+	int length = str->size();
+	str = NULL;
+	delete str;
+	gotoxy(x, y);
+	while (length--)
+	{
+		std::cout << " ";
+	}
+	Sleep(100);
+	system("cls");
+}
+
 
 void Tools::gotoxy(short x, short y)
 {
@@ -34,49 +360,49 @@ void Tools::coloredOutput(std::string st, short id)
 	}
 	switch (id)
 	{
-	case 0://WHITE°×£¨Default£©
+	case 0://WHITE °×£¨Default£©
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
 		break;
-	case 1://L_WHITEÁÁ°×
+	case 1://L_WHITE ÁÁ°×
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
 		break;
-	case 2://GREY»Ò
+	case 2://GREY »Ò
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY);
 		break;
-	case 3://REDºì
+	case 3://RED ºì
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED);
 		break;
-	case 4://PINK·Û
+	case 4://PINK ·Û
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_RED);
 		break;
-	case 5://BULEÀ¶
+	case 5://BULE À¶
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_BLUE);
 		break;
-	case 6://L_BLUEµ­À¶
+	case 6://L_BLUE µ­À¶
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_BLUE);
 		break;
-	case 7://GREENÂÌ
+	case 7://GREEN ÂÌ
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN);
 		break;
-	case 8://L_GREENµ­ÂÌ
+	case 8://L_GREEN µ­ÂÌ
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_GREEN);
 		break;
-	case 9://GOLDEN½ð
+	case 9://GOLDEN ½ð
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED | FOREGROUND_GREEN);
 		break;
-	case 10://YELLOW»Æ
+	case 10://YELLOW »Æ
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_RED | FOREGROUND_GREEN);
 		break;
-	case 11://PURLPE×Ï
+	case 11://PURLPE ×Ï
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED | FOREGROUND_BLUE);
 		break;
-	case 12://INDIGOµå
+	case 12://INDIGO µå
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_RED | FOREGROUND_BLUE);
 		break;
-	case 13://CYANÇà
+	case 13://CYAN Çà
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN | FOREGROUND_BLUE);
 		break;
-	case 14://CYANINEÝ¼
+	case 14://CYANINE Ý¼
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_GREEN | FOREGROUND_BLUE);
 		break;
 	}
