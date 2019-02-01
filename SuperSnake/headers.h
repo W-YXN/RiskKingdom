@@ -1,12 +1,18 @@
 #include "pch.h"
+
 #pragma once
+#ifndef HEADER_H
+#define HEADER_H
 
 #include <Windows.h>
 #include <thread>
 #include <mutex> 
 #include "Tools.h"
+#include "window.h"
+#include "ini.h"
 
 extern std::mutex mu;
+extern std::stringstream ss;
 
 constexpr short WHITE = (short)0;
 constexpr short L_WHITE = (short)1;
@@ -29,3 +35,8 @@ constexpr short CYANINE = (short)14;
 int main();
 void theBeginning(Tools Tool);
 void pogress_bar();
+void setCentredWindow(Window window, bool* stopValue);
+
+
+
+#endif
