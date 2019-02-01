@@ -1,6 +1,8 @@
 #include "pch.h"
 #include "headers.h"
 
+std::stringstream ss;
+
 void Tools::copyrightVideo()
 {
 	hideMouse();
