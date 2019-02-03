@@ -1,2 +1,2 @@
 # RiskKingdom
-RiskKingdom,A Grang New Program
+RiskKingdom,A Grand New Program
