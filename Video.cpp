@@ -1,11 +1,40 @@
 #include "pch.h"
 #include "headers.h"
 
+void goProgressBar(bool& stopValue) {
+	while (true) {
+		mu.lock();
+		if (true == stopValue) {
+			setOutputBuffer(newConsoleHandle);
+			progress_bar();
+			Sleep(100);
+			progress_bar();
+			Sleep(100);
+			progress_bar();
+			Sleep(100);
+			progress_bar();
+			Sleep(100);
+			progress_bar();
+			Sleep(100);
+			progress_bar();
+			Sleep(100);
+			progress_bar();
+			Sleep(100);
+			progress_bar();
+			Sleep(70);
+			setOutputBuffer(originConsoleHandle);
+		}
+		else;
+		mu.unlock();
+		Sleep(30);
+	}
+}
 
-void pogress_bar()
+void progress_bar()
 {
 	Tools tempTool;
-	constexpr short PogressBar[9][13] =
+	static int BarNumber = 0;
+	constexpr short ProgressBar[9][13] =
 	{
 		{
 		},
@@ -50,7 +79,6 @@ void pogress_bar()
 			0,0,0,-1,
 		}
 	};
-	int BarNumber = 0;
 	BarNumber++;
 	if (BarNumber > 8)
 	{
@@ -61,7 +89,7 @@ void pogress_bar()
 
 	for (int i = 0; i <= 11; i++)
 	{
-		switch (PogressBar[BarNumber][i])
+		switch (ProgressBar[BarNumber][i])
 		{
 		case 1:
 			tempTool.gotoxy(x, y);

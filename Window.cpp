@@ -1,6 +1,8 @@
 #include "pch.h"
 #include "headers.h"
 
+HANDLE CurrentHandle;
+
 void Window::setBigWindow() {
 	system("mode con cols=103 lines=34");
 }
@@ -16,15 +18,16 @@ void Window::setSmallWindow() {
 void Window::setCentre(bool& stopValue) {
 	HWND hwndOwner;
 	RECT rc, rcDlg, rcOwner;
-	//检索与调用进程相关联的控制台窗口句柄
-	HWND hwnd = GetConsoleWindow();
-	//GetParent函数获得一个指定子窗口的父窗口句柄赋值给窗口句柄变量hwndOwner，当为空的情况下，将桌面窗口的句柄赋值给hwndOwner。
-	//桌面窗口覆盖整个屏幕。桌面窗口是一个要在其上绘制所有的图标和其他窗口的区域
-	if ((hwndOwner = GetParent(hwnd)) == NULL)
-	{
-		hwndOwner = GetDesktopWindow();
-	}
 	while (stopValue == true) {
+		//检索与调用进程相关联的控制台窗口句柄
+		HWND hwnd = GetConsoleWindow();
+		//GetParent函数获得一个指定子窗口的父窗口句柄赋值给窗口句柄变量hwndOwner，当为空的情况下，将桌面窗口的句柄赋值给hwndOwner。
+		//桌面窗口覆盖整个屏幕。桌面窗口是一个要在其上绘制所有的图标和其他窗口的区域
+		if ((hwndOwner = GetParent(hwnd)) == NULL)
+		{
+		hwndOwner = GetDesktopWindow();
+		}
+
 		//该函数返回指定窗口的边框矩形的尺寸。
 		GetWindowRect(hwndOwner, &rcOwner);
 		GetWindowRect(hwnd, &rcDlg);
@@ -68,4 +71,8 @@ Window::~Window() {
 void setCentredWindow(Window window, bool* stopValue) {
 	window.setCentre(*stopValue);
 	return;
+}
+
+HANDLE getCurrentHandle() {
+	return CurrentHandle;
 }

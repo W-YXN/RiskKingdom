@@ -3,9 +3,13 @@
 
 std::stringstream ss;
 
+void setOutputBuffer(HANDLE id) {
+	SetConsoleActiveScreenBuffer(id);
+	CurrentHandle = id;
+}
+
 void Tools::copyrightVideo()
 {
-	hideMouse();
 	int x = 12;
 	int y = 1;
 
@@ -335,12 +339,12 @@ void Tools::gotoxy(short x, short y)
 	COORD coord;
 	coord.X = x;
 	coord.Y = y;
-	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
+	SetConsoleCursorPosition(getCurrentHandle(), coord);
 }
 
 void Tools::hideMouse()
 {
-	HANDLE handle = GetStdHandle(STD_OUTPUT_HANDLE);
+	HANDLE handle = getCurrentHandle();
 	CONSOLE_CURSOR_INFO CursorInfo;
 	GetConsoleCursorInfo(handle, &CursorInfo);//GetConsoleInfo
 	CursorInfo.bVisible = false; //Hide
@@ -363,53 +367,53 @@ void Tools::coloredOutput(std::string st, short id)
 	switch (id)
 	{
 	case 0://WHITE °×£¨Default£©
-		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
+		SetConsoleTextAttribute(getCurrentHandle(), FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
 		break;
 	case 1://L_WHITE ÁÁ°×
-		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
+		SetConsoleTextAttribute(getCurrentHandle(), FOREGROUND_INTENSITY | FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
 		break;
 	case 2://GREY »Ò
-		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY);
+		SetConsoleTextAttribute(getCurrentHandle(), FOREGROUND_INTENSITY);
 		break;
 	case 3://RED ºì
-		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED);
+		SetConsoleTextAttribute(getCurrentHandle(), FOREGROUND_RED);
 		break;
 	case 4://PINK ·Û
-		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_RED);
+		SetConsoleTextAttribute(getCurrentHandle(), FOREGROUND_INTENSITY | FOREGROUND_RED);
 		break;
 	case 5://BULE À¶
-		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_BLUE);
+		SetConsoleTextAttribute(getCurrentHandle(), FOREGROUND_BLUE);
 		break;
 	case 6://L_BLUE µ­À¶
-		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_BLUE);
+		SetConsoleTextAttribute(getCurrentHandle(), FOREGROUND_INTENSITY | FOREGROUND_BLUE);
 		break;
 	case 7://GREEN ÂÌ
-		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN);
+		SetConsoleTextAttribute(getCurrentHandle(), FOREGROUND_GREEN);
 		break;
 	case 8://L_GREEN µ­ÂÌ
-		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_GREEN);
+		SetConsoleTextAttribute(getCurrentHandle(), FOREGROUND_INTENSITY | FOREGROUND_GREEN);
 		break;
 	case 9://GOLDEN ½ð
-		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED | FOREGROUND_GREEN);
+		SetConsoleTextAttribute(getCurrentHandle(), FOREGROUND_RED | FOREGROUND_GREEN);
 		break;
 	case 10://YELLOW »Æ
-		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_RED | FOREGROUND_GREEN);
+		SetConsoleTextAttribute(getCurrentHandle(), FOREGROUND_INTENSITY | FOREGROUND_RED | FOREGROUND_GREEN);
 		break;
 	case 11://PURLPE ×Ï
-		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED | FOREGROUND_BLUE);
+		SetConsoleTextAttribute(getCurrentHandle(), FOREGROUND_RED | FOREGROUND_BLUE);
 		break;
 	case 12://INDIGO µå
-		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_RED | FOREGROUND_BLUE);
+		SetConsoleTextAttribute(getCurrentHandle(), FOREGROUND_INTENSITY | FOREGROUND_RED | FOREGROUND_BLUE);
 		break;
 	case 13://CYAN Çà
-		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_GREEN | FOREGROUND_BLUE);
+		SetConsoleTextAttribute(getCurrentHandle(), FOREGROUND_GREEN | FOREGROUND_BLUE);
 		break;
 	case 14://CYANINE Ý¼
-		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_INTENSITY | FOREGROUND_GREEN | FOREGROUND_BLUE);
+		SetConsoleTextAttribute(getCurrentHandle(), FOREGROUND_INTENSITY | FOREGROUND_GREEN | FOREGROUND_BLUE);
 		break;
 	}
-	std::cout << st;//Output with Colour
-	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);//Default
+	std::cout << st;	//Output with Colour
+	SetConsoleTextAttribute(getCurrentHandle(), FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);//Default
 }
 
 Tools::Tools() {
